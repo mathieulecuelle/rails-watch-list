@@ -1,0 +1,18 @@
+<div class="container">
+</div>
+
+<div class="banner-container">
+  <%= image_tag "daniel-guerra-MjZwrERreuY-unsplash.jpg",
+                alt: "Description",
+                class: "banner-image" %>
+  <h1 class="banner-title">Save any kind of movies</h1>
+</div>
+
+<div class="container">
+  <h1>New movie list</h1>
+   <%= link_to "Back to list", lists_path, class: "btn btn-info" %>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class: "btn btn-info"%>
+  <% end %>
+</div>

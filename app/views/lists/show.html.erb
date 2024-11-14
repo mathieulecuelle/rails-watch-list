@@ -1,0 +1,45 @@
+<div class="container">
+</div>
+
+<div class="banner-container">
+  <%= image_tag "daniel-guerra-MjZwrERreuY-unsplash.jpg",
+                alt: "Description",
+                class: "banner-image" %>
+  <h1 class="banner-title"><%= @list.name %> movies</h1>
+</div>
+
+<div class="container">
+  <h1>New movie list</h1>
+   <%= link_to "Back to list", lists_path, class: "btn btn-info" %>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class: "btn btn-info"%>
+  <% end %>
+</div>
+
+  <% @list.each do |b| %>
+    <p class="list-group-item"><%= b.bookmarks.comment %></p>
+  <% end %>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">xx</h5>
+      <p class="card-text">yy</p>
+      <p class="card-text">zz</p>
+      <% @list.movies.each do |b| %>
+        <p class="list-group-item"><%= b.title %></p>
+      <% end %>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <ul class="list-group">
+          <% @list.bookmarks.each do |b| %>
+            <li class="list-group-item"><%= b.comment %></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Dekete to do</a>
+    </div>
