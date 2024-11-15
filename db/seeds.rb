@@ -7,11 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
+puts "Destroy all"
 Bookmark.destroy_all
 Movie.destroy_all
 Bookmark.destroy_all
 
+puts "Movies"
 movie1 = Movie.create(
   title: "Avengers: Endgame",
   overview: "After the devastating events of Avengers: Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.",
@@ -67,7 +68,7 @@ movie8 = Movie.create(
   poster_url: "spider_man.jpg",
   rating: 8
 )
-
+puts "Lists"
 # Création des listes
 list1 = List.create(name: "Top Action")
 list2 = List.create(name: "Sci-Fi")
@@ -76,7 +77,7 @@ list4 = List.create(name: "Must-See")
 list5 = List.create(name: "Superhero")
 list6 = List.create(name: "Inspirational")
 list7 = List.create(name: "Horror")
-
+puts "Bookmarks"
 # Création des bookmarks (associant les films aux listes avec des commentaires)
 Bookmark.create(movie: movie1, list: list1, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
 Bookmark.create(movie: movie2, list: list2, comment: "A mind-bending masterpiece with incredible visual effects and a gripping story.")
