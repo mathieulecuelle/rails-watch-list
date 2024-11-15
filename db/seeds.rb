@@ -76,10 +76,11 @@ list3 = List.create(name: "Family")
 list4 = List.create(name: "Must-See")
 list5 = List.create(name: "Superhero")
 list6 = List.create(name: "Inspirational")
-list7 = List.create(name: "Horror")
+# list7 = List.create(name: "Horror")
+
 puts "Bookmarks"
 # Création des bookmarks (associant les films aux listes avec des commentaires)
-Bookmark.create(movie_id: movie1.id, list_id: list1.id, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
+Bookmark.create(movie: movie1, list: list1, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
 Bookmark.create(movie: movie2, list: list2, comment: "A mind-bending masterpiece with incredible visual effects and a gripping story.")
 Bookmark.create(movie: movie3, list: list1, comment: "The ultimate superhero movie, with an unforgettable performance by Heath Ledger as the Joker.")
 Bookmark.create(movie: movie4, list: list6, comment: "An inspirational story that shows the power of perseverance through life's hardships.")
