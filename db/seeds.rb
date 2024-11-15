@@ -30,7 +30,7 @@ movie2 = Movie.create(
 movie3 = Movie.create(
   title: "The Dark Knight",
   overview: "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, forcing Batman to come out of retirement.",
-  poster_url: "the_dark_knigh.jpg",
+  poster_url: "the_dark_knight.jpg",
   rating: 10
 )
 
