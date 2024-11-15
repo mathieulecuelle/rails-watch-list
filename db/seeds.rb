@@ -10,7 +10,7 @@
 puts "Destroy all"
 Bookmark.destroy_all
 Movie.destroy_all
-Bookmark.destroy_all
+List.destroy_all
 
 puts "Movies"
 movie1 = Movie.create(
@@ -79,21 +79,21 @@ list6 = List.create(name: "Inspirational")
 list7 = List.create(name: "Horror")
 puts "Bookmarks"
 # Création des bookmarks (associant les films aux listes avec des commentaires)
-# Bookmark.create(movie_id: movie1.id, list_id: list1.id, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
-# Bookmark.create(movie: movie2, list: list2, comment: "A mind-bending masterpiece with incredible visual effects and a gripping story.")
-# Bookmark.create(movie: movie3, list: list1, comment: "The ultimate superhero movie, with an unforgettable performance by Heath Ledger as the Joker.")
-# Bookmark.create(movie: movie4, list: list6, comment: "An inspirational story that shows the power of perseverance through life's hardships.")
-# Bookmark.create(movie: movie5, list: list2, comment: "A revolutionary film that explores the nature of reality in a thrilling sci-fi adventure.")
-# Bookmark.create(movie: movie6, list: list1, comment: "A powerful story of revenge and honor set in ancient Rome, with amazing action sequences.")
-# Bookmark.create(movie: movie7, list: list3, comment: "A heartwarming story that will leave you in tears. A timeless Disney classic.")
-# Bookmark.create(movie: movie8, list: list5, comment: "An exciting and fun superhero adventure with Spider-Man facing villains from other dimensions.")
-# Bookmark.create(movie: movie1, list: list5, comment: "The ultimate superhero crossover event with amazing action and emotional moments.")
-# Bookmark.create(movie: movie2, list: list4, comment: "A must-see film that will keep you thinking long after the credits roll.")
-# Bookmark.create(movie: movie3, list: list4, comment: "A film that defines the superhero genre. A perfect combination of action, drama, and psychology.")
-# Bookmark.create(movie: movie4, list: list6, comment: "A movie that proves how much one person can change the world with kindness and determination.")
-# Bookmark.create(movie: movie5, list: list2, comment: "A film that explores deep philosophical questions with a captivating plot and visual effects.")
-# Bookmark.create(movie: movie6, list: list3, comment: "A perfect mix of epic battle scenes and personal tragedy. A film that resonates deeply.")
-# Bookmark.create(movie: movie7, list: list5, comment: "A touching story of family, loss, and redemption, all set in the wilds of Africa.")
-# Bookmark.create(movie: movie8, list: list1, comment: "Spider-Man faces a multiverse disaster in this thrilling action-packed adventure.")
+Bookmark.create(movie_id: movie1.id, list_id: list1.id, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
+Bookmark.create(movie: movie2, list: list2, comment: "A mind-bending masterpiece with incredible visual effects and a gripping story.")
+Bookmark.create(movie: movie3, list: list1, comment: "The ultimate superhero movie, with an unforgettable performance by Heath Ledger as the Joker.")
+Bookmark.create(movie: movie4, list: list6, comment: "An inspirational story that shows the power of perseverance through life's hardships.")
+Bookmark.create(movie: movie5, list: list2, comment: "A revolutionary film that explores the nature of reality in a thrilling sci-fi adventure.")
+Bookmark.create(movie: movie6, list: list1, comment: "A powerful story of revenge and honor set in ancient Rome, with amazing action sequences.")
+Bookmark.create(movie: movie7, list: list3, comment: "A heartwarming story that will leave you in tears. A timeless Disney classic.")
+Bookmark.create(movie: movie8, list: list5, comment: "An exciting and fun superhero adventure with Spider-Man facing villains from other dimensions.")
+Bookmark.create(movie: movie1, list: list5, comment: "The ultimate superhero crossover event with amazing action and emotional moments.")
+Bookmark.create(movie: movie2, list: list4, comment: "A must-see film that will keep you thinking long after the credits roll.")
+Bookmark.create(movie: movie3, list: list4, comment: "A film that defines the superhero genre. A perfect combination of action, drama, and psychology.")
+Bookmark.create(movie: movie4, list: list6, comment: "A movie that proves how much one person can change the world with kindness and determination.")
+Bookmark.create(movie: movie5, list: list2, comment: "A film that explores deep philosophical questions with a captivating plot and visual effects.")
+Bookmark.create(movie: movie6, list: list3, comment: "A perfect mix of epic battle scenes and personal tragedy. A film that resonates deeply.")
+Bookmark.create(movie: movie7, list: list5, comment: "A touching story of family, loss, and redemption, all set in the wilds of Africa.")
+Bookmark.create(movie: movie8, list: list1, comment: "Spider-Man faces a multiverse disaster in this thrilling action-packed adventure.")
 
 puts "Seed data created successfully!"
