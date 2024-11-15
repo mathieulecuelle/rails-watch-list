@@ -9,37 +9,28 @@
 </div>
 
 <div class="container">
-  <h1>New movie list</h1>
-   <%= link_to "Back to list", lists_path, class: "btn btn-info" %>
-  <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.submit class: "btn btn-info"%>
-  <% end %>
+  <%= link_to "Back to list", lists_path, class: "btn btn-info" %>
+  <%= link_to "Create a bookmark", new_list_bookmark_path(@list), class: "btn btn-info" %>
 </div>
 
-  <% @list.each do |b| %>
-    <p class="list-group-item"><%= b.bookmarks.comment %></p>
-  <% end %>
-
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">xx</h5>
-      <p class="card-text">yy</p>
-      <p class="card-text">zz</p>
-      <% @list.movies.each do |b| %>
-        <p class="list-group-item"><%= b.title %></p>
-      <% end %>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <ul class="list-group">
-          <% @list.bookmarks.each do |b| %>
-            <li class="list-group-item"><%= b.comment %></li>
-          <% end %>
-        </ul>
-      </li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Dekete to do</a>
-    </div>
+<div class="container">
+  <div class="row d-flex flex-wrap justify-content-start">
+    <% @bookmarks.each do |b| %>
+      <div class="col-md-3 mb-4"> <!-- Carte en colonne avec une largeur de 3 colonnes -->
+        <div class="card" style="width: 18rem;">
+          <%= image_tag b.movie.poster_url, alt: b.movie.poster_url, class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= b.movie.title %></h5>
+            <p class="card-text"><%= b.movie.rating %>/10</p>
+            <p class="card-text"><%= b.movie.overview %></p>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <%= image_tag "apostrophe.png", alt: "apostrophe.png", width:50%>
+              <%= b.comment %>
+            </h6>
+            <a href="#" class="btn btn-outline-danger">delete</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

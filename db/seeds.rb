@@ -10,66 +10,67 @@
 movie1 = Movie.create(
   title: "Avengers: Endgame",
   overview: "After the devastating events of Avengers: Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.",
-  poster_url: "https://image.tmdb.org/t/p/original/hxjUVytEz1g58r3yQzXozu3OhLf.jpg",
-  rating: 8.4
+  poster_url: "avengers_endgame.jpg",
+  rating: 3
 )
 
 movie2 = Movie.create(
   title: "Inception",
   overview: "A thief who enters the dreams of others to steal secrets from their subconscious is given the task of planting an idea into the mind of a CEO.",
-  poster_url: "https://image.tmdb.org/t/p/original/jFh76gnz8TVUnN9HcN3gswZqR7s.jpg",
-  rating: 8.8
+  poster_url: "inception.jpg",
+  rating: 8
 )
 
 movie3 = Movie.create(
   title: "The Dark Knight",
   overview: "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, forcing Batman to come out of retirement.",
-  poster_url: "https://image.tmdb.org/t/p/original/rlrHHdj5nmnYxsTjsJlYy3aOWjR.jpg",
-  rating: 9.0
+  poster_url: "the_dark_knigh.jpg",
+  rating: 10
 )
 
 movie4 = Movie.create(
   title: "Forrest Gump",
   overview: "The presidencies of Kennedy and Johnson, the events of Vietnam, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an extraordinary life.",
-  poster_url: "https://image.tmdb.org/t/p/original/aSgwB16mdxFXHQGz7R9nX9gfHTw.jpg",
-  rating: 8.8
+  poster_url: "forrest_gump.jpg",
+  rating: 7
 )
 
 movie5 = Movie.create(
   title: "The Matrix",
   overview: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
-  poster_url: "https://image.tmdb.org/t/p/original/j3Z5XqYPshZG01FdHo3s1zdiw5T.jpg",
-  rating: 8.7
+  poster_url: "the_matrix.jpg",
+  rating: 5
 )
 
 movie6 = Movie.create(
   title: "Gladiator",
   overview: "A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.",
-  poster_url: "https://image.tmdb.org/t/p/original/h3WiVSKjtTkhS7sYv7Gp1pQ7PZq.jpg",
-  rating: 8.5
+  poster_url: "gladiator.jpg",
+  rating: 9
 )
 
 movie7 = Movie.create(
   title: "The Lion King",
   overview: "Lion prince Simba and his father are targeted by his evil uncle, who wants to ascend the throne himself.",
-  poster_url: "https://image.tmdb.org/t/p/original/vlsAa24jwSyOrrnU7XfFqkbcp5Z.jpg",
-  rating: 8.5
+  poster_url: "lion_king.jpg",
+  rating: 4
 )
 
 movie8 = Movie.create(
   title: "Spider-Man: No Way Home",
   overview: "Peter Parker seeks Doctor Strange's help to make his identity as Spider-Man a secret again, but when the spell goes wrong, villains from other universes begin to appear.",
-  poster_url: "https://image.tmdb.org/t/p/original/4lIijOHV6jm3wKP2Xkl7HtfeN71.jpg",
-  rating: 8.3
+  poster_url: "spider_man.jpg",
+  rating: 8
 )
 
 # Création des listes
-list1 = List.create(name: "Top Action Movies")
-list2 = List.create(name: "Sci-Fi Classics")
-list3 = List.create(name: "Family Favorites")
-list4 = List.create(name: "Must-See Movies")
-list5 = List.create(name: "Superhero Films")
-list6 = List.create(name: "Inspirational Movies")
+list1 = List.create(name: "Top Action")
+list2 = List.create(name: "Sci-Fi")
+list3 = List.create(name: "Family")
+list4 = List.create(name: "Must-See")
+list5 = List.create(name: "Superhero")
+list6 = List.create(name: "Inspirational")
+list7 = List.create(name: "Horror")
 
 # Création des bookmarks (associant les films aux listes avec des commentaires)
 Bookmark.create(movie: movie1, list: list1, comment: "A thrilling finale to the Infinity Saga. Epic battles and emotional moments!")
