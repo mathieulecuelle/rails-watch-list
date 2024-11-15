@@ -7,6 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Bookmark.destroy_all
+Movie.destroy_all
+Bookmark.destroy_all
+
 movie1 = Movie.create(
   title: "Avengers: Endgame",
   overview: "After the devastating events of Avengers: Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.",
